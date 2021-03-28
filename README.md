@@ -11,7 +11,7 @@ The active Google API key and project with Billing info setup is required
 See more https://developers.google.com/maps/gmp-get-started#create-project
 
 ## Local setup
-Create application.properties file with next parameters:\
+Create application.properties file with next parameters:
 
 	demo.api-key=<YOUR GOOGLE API KEY>
 	demo.location-file-path=demo_points.csv

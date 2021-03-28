@@ -156,7 +156,14 @@ public class LocationService {
 
   @PostConstruct
   public void init() {
-    File f = new File(props.getLocationFilePath());
+    String path = props.getLocationFilePath();
+
+    if (path == null) {
+      throw new IllegalArgumentException(
+          "Missing 'location-file-path' configuration.");
+    }
+
+    File f = new File(path);
     if (!f.exists()) {
       log.warn("File {} not found.", f.getAbsolutePath());
       return;
